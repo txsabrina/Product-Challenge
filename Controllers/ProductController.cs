@@ -25,7 +25,7 @@ public class ProductController
 
     public IQueryable<Product> getAll()
     {
-        return _context.Product;
+        return _context.Products;
     }
 
     public void Update(int id, string name)
@@ -37,7 +37,7 @@ public class ProductController
 
     public void Delete(int id)
     {
-        var foundProduct = _context.Products.FindOrDefault(product => product.Id == id);
+        var foundProduct = _context.Products.FirstOrDefault(product => product.Id == id);
         if(foundProduct != null) 
         {
             _context.Products.Remove(foundProduct);
