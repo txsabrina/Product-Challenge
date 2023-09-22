@@ -8,7 +8,7 @@ public class Connection : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            var connectionString = "Server=127.0.01;Database=product_challenge_db;User=sa;Password=123456";
+            var connectionString = "Server=127.0.01;Database=product_challenge_db;User=sa;Password=12345678";
             optionsBuilder.UseSqlServer(connectionString);
         }
     }
